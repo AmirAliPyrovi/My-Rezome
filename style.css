@@ -237,10 +237,6 @@
 .theme-toggle:active {
     transform: scale(0.9);
 }
-
-.stats-grid{
-    display: none;
-}
 .resume-btn {
     position: relative;
     display: inline-flex;
@@ -1380,10 +1376,6 @@ a{
     .h{
         display: none;
     }
-
-    .stats-grid{
-        display: none;
-    }
 .mobile-nav a::before {
     content: "";
     position: absolute;
@@ -1657,8 +1649,32 @@ display: none;
             gap:105px;
 
     }
-        .stats-grid {
-       display: none;
-    }
+    
+}
 
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    width: 100%;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.stat-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-width: 0;
+}
+
+@media screen and (max-width: 600px) {
+    .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 15px;
+    }
 }
