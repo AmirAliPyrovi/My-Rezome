@@ -32,7 +32,6 @@
     overflow: hidden;
     pointer-events: none;
 }
-
 .glitch::before {
     color: #00aaff;
     animation: glitch-blue 2.5s infinite linear alternate-reverse;
@@ -42,6 +41,7 @@
     color: #ff3158;
     animation: glitch-red 2s infinite linear alternate-reverse;
 }
+
 
 @keyframes glitch-blue {
     0%, 90%, 100% {
@@ -236,6 +236,10 @@
 }
 .theme-toggle:active {
     transform: scale(0.9);
+}
+
+.stats-grid{
+    display: none;
 }
 .resume-btn {
     position: relative;
@@ -1376,6 +1380,10 @@ a{
     .h{
         display: none;
     }
+
+    .stats-grid{
+        display: none;
+    }
 .mobile-nav a::before {
     content: "";
     position: absolute;
@@ -1649,5 +1657,8 @@ display: none;
             gap:105px;
 
     }
-    
+        .stats-grid {
+       display: none;
+    }
+
 }
