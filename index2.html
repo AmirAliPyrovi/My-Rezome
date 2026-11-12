@@ -1,0 +1,474 @@
+<!-- Amirali-peyrovi -->
+<!DOCTYPE html>
+<html dir="rtl" lang="fa">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="theme-color" content="#111827"/>
+    <meta name="description" content="وب‌سایت شخصی امیر؛ توسعه‌دهنده وب و علاقه‌مند به فناوری"/>
+    <title>AmirAli Peyrovi Web Developer</title>
+    <link rel="icon" href="apple-touch-icon (1).png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+    <link href="style.css" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet"/>
+</head>
+<body>
+<canvas id="particleRain"></canvas>
+<header class="site-header">
+    <div class="container nav-wrap">
+        <div class="logo-frame">
+            <img src="Monochrome AP Geometric Logo.png" alt="logo" class="logo">
+        </div>
+        <a class="brand glitch" href="#home" data-text="AmirAli Peyrovi" style="font-size: 20px;">
+            AmirAli Peyrovi
+            <span>
+                <span id="brandTyping"></span>
+                <span class="typing-cursor"></span>
+            </span>
+        </a>
+        <nav aria-label="Main navigation" class="desktop-nav">
+            <a class="active" href="#home" data-fa="خانه" data-en="Home">خانه</a>
+            <a href="#about" data-fa="درباره من" data-en="About Me">درباره من</a>
+            <a href="#skills" data-fa="مهارت‌ها" data-en="Skills">مهارت‌ها</a>
+            <a href="#projects" data-fa="نمونه‌کارها" data-en="Projects">نمونه‌کارها</a>
+            <a href="#call" data-fa="تماس با من" data-en="Contact Me">تماس با من</a>
+        </nav> 
+        <button id="languageToggle" class="language-toggle" type="button">
+            EN
+        </button>
+        <button aria-expanded="false" aria-label="Open menu" class="menu-toggle" id="menuToggle">
+            <i></i>
+            <i></i>
+            <i></i>
+        </button>
+    </div>
+    <nav class="mobile-nav" id="mobileNav">
+        <a href="#home" data-fa="خانه" data-en="Home">خانه</a>
+        <a href="#about" data-fa="درباره من" data-en="About Me">درباره من</a>
+        <a href="#skills" data-fa="مهارت‌ها" data-en="Skills">مهارت‌ها</a>
+        <a href="#projects" data-fa="نمونه‌کارها" data-en="Projects">نمونه‌کارها</a>
+        <a href="#call" data-fa="تماس با من" data-en="Contact Me">تماس با من</a>
+    </nav>
+</header>
+<div class="service-alert" id="serviceAlert" style="position: fixed; bottom: 10px;">
+    <button class="alert-close" id="closeAlert" aria-label="بستن">
+        &times;
+    </button>
+    <div class="alert-icon">
+        <i class="fas fa-globe"></i>
+    </div>
+    <div class="alert-content">
+        <h4> درخواست طراحی سایت</h4>
+        <p>
+            برای ثبت درخواست خدمات طراحی سایت،
+           به ایدی تلگرام زیر مراجعه کنید
+        </p>
+        <a href="https://t.me/Amir_Web_Coder" style="color: red;">Telegram</a>
+    </div>
+</div>
+<div class="social-menu" id="socialMenu">
+    <a href="https://t.me/Amir_Web_Coder"
+       class="social-item telegram"
+       target="_blank"
+       rel="noopener"
+       aria-label="Telegram">
+        <i class="fab fa-telegram"></i>
+    </a>
+    <a href="https://eitaa.com/Amir_WebCoder"
+       class="social-item eitaa"
+       target="_blank"
+       rel="noopener"
+       aria-label="Eitaa">
+        <img src="eitaa-svgrepo-com.svg" alt="eitaa" style="width: 35px;">
+    </a>
+    <a href="https://www.linkedin.com/in/amirali-pyrovi-640773448?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+       class="social-item linkedin"
+       target="_blank"
+       rel="noopener"
+       aria-label="LinkedIn">
+        <i class="fab fa-linkedin-in"></i>
+    </a>
+    <button class="social-toggle" id="socialToggle" style="border-radius: 50%;"
+            aria-label="شبکه‌های اجتماعی">
+        <i class="fas fa-share-alt" ></i>
+    </button>
+
+</div>
+<main>
+    <section class="hero" id="home">
+        <div class="container hero-inner">
+            <div class="hero-copy">
+                <h1>
+                    <span data-fa="سلام من" data-en="Hello, I'm">سلام من</span>
+                    <br/>
+                    <span data-fa="امیرعلی پیروی" data-en="AmirAli Peyrovi">امیرعلی پیروی</span>
+                    <span data-fa="هستم" data-en="">هستم</span>
+                </h1>
+                <h2 data-fa="توسعه‌دهنده وب" data-en="Web Developer">
+                    توسعه‌دهنده وب
+                </h2>
+                <br/>
+                        <a href="twsahdhndh-frantand-or-Frontend-Developer.png" download="twsahdhndh-frantand-or-Frontend-Developer.png" class="download-btn" id="bd">
+                        <i class="fas fa-download"></i>
+                        دانلود رزومه
+                    </a>
+                    <div class="hero-actions">
+                    <span></span>
+                </div>
+            </div>
+            <img
+            alt="my-img"
+            src="photo_2026-1e1-12_01-04-07.png"
+            style="width: 600px;"
+                class="logo1"/>
+        </div>
+    </section>
+    <aside></aside>
+    <span></span>
+    <i></i>
+    <i></i>
+    <i></i>
+    <b></b>
+    <div class="section-copy" id="about" style="text-align: center;padding: 25px;">
+        <h2 data-fa="درباره من" data-en="About Me">
+            درباره من
+        </h2>
+        <p
+            data-fa="من امیر، یک توسعه‌دهنده وب هستم. به یادگیری مداوم، حل مسئله و ساخت تجربه‌های دیجیتال کاربردی علاقه دارم. همیشه سعی می‌کنم ایده‌ها را به محصولاتی ساده، سریع و زیبا تبدیل کنم."
+            data-en="I'm Amir, a web developer passionate about continuous learning, problem-solving, and building practical digital experiences. I always strive to turn ideas into simple, fast, and beautiful products.">
+            من امیر، یک توسعه‌دهنده وب هستم. به یادگیری مداوم، حل مسئله و ساخت تجربه‌های دیجیتال کاربردی علاقه دارم. همیشه سعی می‌کنم ایده‌ها را به محصولاتی ساده، سریع و زیبا تبدیل کنم.
+        </p>
+        <p
+            data-fa="در مسیر توسعه فرانت‌اند فعالیت می‌کنم و با مفاهیم بک‌اند و پایگاه داده هم آشنایی دارم."
+            data-en="I focus on frontend development and also have knowledge of backend development and databases.">
+            در مسیر توسعه فرانت‌اند فعالیت می‌کنم و با مفاهیم بک‌اند و پایگاه داده هم آشنایی دارم.
+        </p>
+    </div>
+    <section class="timeline-section" id="journey">
+        <div class="timeline-heading"></div>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-icon">1</div>
+                <div class="timeline-card">
+                    <span class="timeline-year">۱۴۰۴</span>
+                    <h3>Python Fundamentals</h3>
+                    <p
+                        data-fa="یادگیری مبانی و مفاهیم اولیه پایتون."
+                        data-en="Learning the fundamentals and basic concepts of Python.">
+                        یادگیری مبانی و مفاهیم اولیه پایتون.
+                    </p>
+                    <div class="timeline-tags">
+                        <span>Python</span>
+                        <span>Basics</span>
+                    </div>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-icon">2</div>
+                <div class="timeline-card">
+                    <span class="timeline-year">۱۴۰۴</span>
+                    <h3>HTML & CSS</h3>
+                    <p
+                        data-fa="یادگیری ساختار صفحات وب و طراحی رابط کاربری."
+                        data-en="Learning web page structure and user interface design.">
+                        یادگیری ساختار صفحات وب و طراحی رابط کاربری.
+                    </p>
+                    <div class="timeline-tags">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                    </div>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-icon">3</div>
+                <div class="timeline-card">
+                    <span class="timeline-year">۱۴۰۵</span>
+                    <h3>WordPress</h3>
+                    <p
+                        data-fa="آشنایی با سیستم مدیریت محتوا و ساخت وب‌سایت."
+                        data-en="Learning content management systems and website development.">
+                        آشنایی با سیستم مدیریت محتوا و ساخت وب‌سایت.
+                    </p>
+                    <div class="timeline-tags">
+                        <span>WordPress</span>
+                    </div>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-icon">4</div>
+                <div class="timeline-card">
+                    <span class="timeline-year">۱۴۰۵</span>
+                    <h3>JavaScript</h3>
+                    <p
+                        data-fa="یادگیری برنامه‌نویسی سمت کاربر و ایجاد تعاملات پویا."
+                        data-en="Learning client-side programming and creating dynamic interactions.">
+                        یادگیری برنامه‌نویسی سمت کاربر و ایجاد تعاملات پویا.
+                    </p>
+                    <div class="timeline-tags">
+                        <span>JavaScript</span>
+                        <span>DOM</span>
+                    </div>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-icon">5</div>
+                <div class="timeline-card">
+                    <span class="timeline-year">۱۴۰۵</span>
+                    <h3>PHP & MySQL</h3>
+                    <p
+                        data-fa="یادگیری برنامه‌نویسی سمت سرور و پایگاه داده."
+                        data-en="Learning server-side programming and database management.">
+                        یادگیری برنامه‌نویسی سمت سرور و پایگاه داده.
+                    </p>
+                    <div class="timeline-tags">
+                        <span>PHP</span>
+                        <span>MySQL</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="skills section" id="skills">
+        <div class="container">
+            <div class="section-heading">
+                <h2 class="h"
+                    data-fa="مهارت‌های من"
+                    data-en="My Skills">
+                    مهارت‌های من
+                </h2>
+                <p
+                    data-fa="تکنولوژی‌هایی که در مسیر توسعه وب یاد گرفتم"
+                    data-en="Technologies I've learned on my web development journey">
+                    تکنولوژی‌هایی که در مسیر توسعه وب یاد گرفتم
+                </p>
+            </div>
+            <div class="skill-grid">
+                <div class="skill-card">
+                    <div class="skill-icon html">
+                        <i class="fa-brands fa-html5" style="font-size: 40px;"></i>
+                    </div>
+                    <b>HTML</b>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon css">
+                        <i class="fa-brands fa-css3-alt" style="font-size: 40px;"></i>
+                    </div>
+                    <b>CSS</b>
+                </div>
+                <div class="skill-card">
+                    <i class="fa-brands fa-square-js" style="color: rgb(255, 212, 59);font-size: 40px;"></i>
+                    <b>JavaScript</b>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon php">
+                        <i class="fa-brands fa-php" style="color: rgb(177, 151, 252);font-size: 40px;"></i>
+                    </div>
+                    <b>PHP</b>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon mysql">
+                        <i class="fa-notdog fa-solid fa-database" style="color: rgb(116, 192, 252);font-size: 40px;"></i>
+                    </div>
+                    <b>MySQL</b>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section class="projects section" id="projects">
+        <div class="container">
+            <div class="projects-top">
+                <div class="section-heading align-right">
+                    <span class="section-kicker"></span>
+                    <h2 data-fa="نمونه‌کارهای من" data-en="My Projects">
+                        نمونه‌کارهای من
+                    </h2>
+                    <p
+                        data-fa="برخی از پروژه‌های جذاب و کاربردی من"
+                        data-en="Some of my interesting and practical projects">
+                        برخی از پروژه‌های جذاب و کاربردی من
+                    </p>
+                </div>
+                <span></span>
+            </div>
+            <div class="project-grid">
+                <article class="project-card">
+                    <div>
+                        <img src="image.png" alt="img-p1" style="width: 100%;height: 100%;">
+                    </div>
+                    <div class="project-info">
+                        <h3
+                            data-fa="سایت فروشگاهی خام"
+                            data-en="Frontend E-commerce Website"
+                        >
+                            سایت فروشگاهی خام
+                        </h3>
+
+                        <p
+                            data-fa="یک سایت فروشگاهی فقط با فرانت‌اند و بدون بک‌اند"
+                            data-en="An e-commerce website built entirely with frontend technologies, without a backend."
+                        >
+                            یک سایت فروشگاهی فقط با فرانت‌اند و بدون بک‌اند
+                        </p>
+                        <div class="project-links">
+                            <a href="https://amiralipyrovi.github.io/FrontShop/"
+                               data-fa="مشاهده آنلاین ↗"
+                               data-en="Live Demo ↗">
+                                مشاهده آنلاین ↗
+                            </a>
+                            <a href="https://github.com/AmirAliPyrovi/FrontShop"
+                               data-fa="مشاهده کد در GitHub"
+                               data-en="View Source Code on GitHub">
+                                مشاهده کد در GitHub
+                                <b><i class="fa-brands fa-github"></i></b>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+                <article class="project-card">
+                    <img src="image2.png" alt="img-p2" style="width: 100%;height:179.5px;">
+                    <div class="project-info">
+                        <h3
+                            data-fa="سیستم عامل تحت وب"
+                            data-en="Web-Based Operating System"
+                        >
+                            سیستم عامل تحت وب
+                        </h3>
+                        <p
+                            data-fa="این سیستم عامل مخصوص دسکتاپ می‌باشد."
+                            data-en="This web-based operating system is designed specifically for desktop devices."
+                        >
+                            این سیستم عامل مخصوص دسکتاپ می‌باشد
+                        </p>
+                        <div class="project-links">
+                            <a href="https://amiralipyrovi.github.io/FrontOS/index2.html"
+                               data-fa="مشاهده آنلاین ↗"
+                               data-en="Live Demo ↗">
+                                مشاهده آنلاین ↗
+                            </a>
+                            <a href="https://github.com/AmirAliPyrovi/FrontOS"
+                               data-fa="مشاهده کد در GitHub"
+                               data-en="View Source Code on GitHub">
+                                مشاهده کد در GitHub
+                                <b><i class="fa-brands fa-github"></i></b>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+                <article class="project-card">
+                    <img src="image3.png" alt="img-p3" style="width: 100%;height: 180px;">
+                    <div class="project-info">
+                        <h3
+                            data-fa="صفحه سه بعدی"
+                            data-en="3D Web Page"
+                        >
+                            صفحه سه بعدی
+                        </h3>
+                        <p
+                            data-fa="صفحه سه بعدی ساده با ویدیو"
+                            data-en="A simple 3D web page with video."
+                        >
+                            صفحه سه بعدی ساده با ویدیو
+                        </p>
+                        <div class="project-links">
+                            <a href="https://amiralipyrovi.github.io/Page3d/"
+                               data-fa="مشاهده آنلاین ↗"
+                               data-en="Live Demo ↗">
+                                مشاهده آنلاین ↗
+                            </a>
+                            <a href="https://github.com/AmirAliPyrovi/Page3d"
+                               data-fa="مشاهده کد در GitHub"
+                               data-en="View Source Code on GitHub">
+                                مشاهده کد در GitHub
+                                <i class="fa-brands fa-github"></i>
+                                <b></b>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+    <div class="stats-grid">
+        <div class="stat-card">
+            <div class="circle-progress" data-percent="100">
+                <span class="counter">0%</span>
+            </div>
+            <h3 data-fa="کیفیت کار" data-en="Work Quality">کیفیت کار</h3>
+        </div>
+        <div class="stat-card">
+            <div class="circle-progress" data-percent="100">
+                <span class="counter">0%</span>
+            </div>
+            <h3 data-fa="رضایت مشتری" data-en="Customer Satisfaction">رضایت مشتری</h3>
+        </div>
+        <div class="stat-card">
+            <div class="circle-progress" data-percent="100">
+                <span class="counter">100%</span>
+            </div>
+            <h3 data-fa="سرعت تحویل" data-en="Delivery Speed">سرعت تحویل</h3>
+        </div>
+    </div>
+</main>
+<footer class="footer">
+    <div class="container footer-inner">
+        <div style="display: flex;" id="call">
+            <div class="socials">
+                <a aria-label="GitHub"
+                   href="https://github.com/AmirAliPyrovi"
+                   class="social-icon">
+                    <i class="fa-brands fa-github" style="font-size: 30px;"></i>
+                </a>
+                <i class="fa-brands fa-linkedin"
+                   style="color: rgb(38, 143, 218); font-size: 30px;">
+                </i>
+                <a aria-label="Telegram" href="https://t.me/Amir_Web_Coder">
+                    <i class="fa-brands fa-telegram"
+                       style="color: rgb(116, 192, 252);font-size: 30px;">
+                    </i>
+                </a>
+            </div>
+        </div>
+        <div style="display: flex;gap: 50px;">
+            <div class="contact-detail">
+                <span class="detail-icon">
+                    <i class="fa-notdog fa-solid fa-envelope"></i>
+                </span>
+                <div>
+                    <small data-fa="ایمیل" data-en="Email">ایمیل</small>
+                    <a href="mailto:amiralipdevloper00@gmail.com" style="color: white;">
+                        amiralipdevloper00@gmail.com
+                    </a>
+                </div>
+            </div>
+            <div class="contact-detail"></div>
+            <div class="contact-detail">
+                <span class="detail-icon">
+                    <i class="fa-notdog fa-solid fa-house"></i>
+                </span>
+                <div>
+                    <small data-fa="آدرس" data-en="Location">آدرس</small>
+                    <span
+                        style="color: white;"
+                        data-fa="ایران، مازندران"
+                        data-en="Mazandaran, Iran"
+                    >
+                        ایران، مازندران
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="copyright">
+        <span
+            data-fa="تمامی حقوق این وب‌سایت متعلق به امیرعلی پیروی است."
+            data-en="All rights reserved. This website belongs to AmirAli Peyrovi.">
+            تمامی حقوق این وب‌سایت متعلق به امیرعلی پیروی است.
+        </span>
+        <span>© 2026</span>
+    </div>
+</footer>
+<script src="app.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,218 @@
+<!-- AmirAliPyrovi -->
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AmirAli Peyrovi Web Developer</title>
+    <link rel="icon" href="apple-touch-icon (1).png" type="image/x-icon">
+<style>
+* {
+    user-select: none;
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    background: #080d18;
+    font-family: Arial, sans-serif;
+}
+#pageLoader {
+    position: fixed;
+    inset: 0;
+    z-index: 999999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle, #102342, #080d18 65%, #03060c);
+    transition: opacity .8s ease, visibility .8s ease;
+}
+#pageLoader.loader-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+.loader-content {
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.logo-wrapper {
+    width: 190px;
+    height: 190px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 28px;
+}
+.loader-orbit {
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    pointer-events: none;
+}
+.orbit-one {
+    border-top-color: #00c8ff;
+    border-right-color: #007bff;
+    box-shadow: 0 0 15px rgba(0, 145, 255, .3);
+    animation: rotateRing 3s linear infinite;
+}
+.orbit-two {
+    inset: 10px;
+    border-bottom-color: #00aaff;
+    border-left-color: #004cff;
+    animation: rotateRing 5s linear infinite reverse;
+}
+.orbit-three {
+    inset: 20px;
+    border-top-color: rgba(0, 190, 255, .5);
+    border-style: dashed;
+    animation: rotateRing 12s linear infinite;
+}
+
+.loader-logo {
+    width: 110px;
+    height: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(0, 140, 255, .08);
+    box-shadow:
+        0 0 25px rgba(0, 140, 255, .25),
+        inset 0 0 20px rgba(0, 140, 255, .12);
+    z-index: 2;
+}
+.loader-logo img {
+    display: block;
+    width: 1025px;
+    height: 75px;
+    object-fit: contain;
+    filter: drop-shadow(0 0 12px rgba(0, 160, 255, .7));
+}
+
+.loader-title {
+    direction: ltr;
+    color: white;
+    font-size: 23px;
+    letter-spacing: 3px;
+    margin: 0 0 12px;
+}
+.loader-title span {
+    color: #00baff;
+}
+.loader-subtitle {
+    direction: ltr;
+    color: #8293ad;
+    font-size: 12px;
+    letter-spacing: 1px;
+    margin: 0 0 25px;
+}
+
+.loader-progress {
+    width: 260px;
+    height: 5px;
+    background: #1b2a40;
+    border-radius: 20px;
+    overflow: hidden;
+}
+#loaderProgressBar {
+    width: 0;
+    height: 100%;
+    background: linear-gradient(90deg, #006eff, #00d5ff);
+    box-shadow: 0 0 15px #009dff;
+    border-radius: inherit;
+    transition: width .15s linear;
+}
+.loader-info {
+    direction: ltr;
+    width: 260px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 12px;
+    color: #71849e;
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+#loaderPercent {
+    color: #00c8ff;
+    font-weight: bold;
+}
+@keyframes rotateRing {
+    to {
+        transform: rotate(360deg);
+    }
+}
+@media(max-width: 400px) {
+    .loader-content {
+        transform: scale(.85);
+    }
+}
+</style>
+</head>
+<body>
+<div id="pageLoader">
+    <div class="loader-content">
+        <div class="logo-wrapper">
+            <div class="loader-orbit orbit-one"></div>
+            <div class="loader-orbit orbit-two"></div>
+            <div class="loader-orbit orbit-three"></div>
+            <div class="loader-logo">
+                <img src="Monochrome AP Geometric Logo.png" alt="AP Logo" >
+            </div>
+        </div>
+        <h2 class="loader-title">
+            AMIR <span>DEVELOPER</span>
+        </h2>
+        <p class="loader-subtitle">
+            Please wait...
+        </p>
+        <div class="loader-progress">
+            <div id="loaderProgressBar"></div>
+        </div>
+        <div class="loader-info">
+            <span>LOADING</span>
+            <span id="loaderPercent">0%</span>
+        </div>
+    </div>
+</div>
+<main>
+</main>
+<script>
+const pageLoader = document.getElementById("pageLoader");
+const progressBar = document.getElementById("loaderProgressBar");
+const percentText = document.getElementById("loaderPercent");
+let progress = 0;
+let finished = false;
+function updateProgress() {
+    const loaded = document.readyState === "complete";
+    if (loaded) {
+        progress += Math.random() * 8 + 3;
+    } else if (progress < 90) {
+        progress += Math.random() * 2 + 1;
+    }
+    progress = Math.min(progress, 100);
+    progressBar.style.width = progress + "%";
+    percentText.textContent = Math.floor(progress) + "%";
+    if (loaded && progress >= 100) {
+        finishLoader();
+    } else {
+        setTimeout(updateProgress, 100);
+    }
+}
+function finishLoader() {
+    if (finished) return;
+    finished = true;
+    progressBar.style.width = "100%";
+    percentText.textContent = "100%";
+    setTimeout(() => {
+        window.location.href="index2.html"
+    }, 400);
+}
+updateProgress();
+</script>
+</body>
+</html>
