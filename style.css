@@ -1373,7 +1373,9 @@ a{
     transition: all 0.3s ease;
     overflow: hidden;
 }
-
+    .h{
+        display: none;
+    }
 .mobile-nav a::before {
     content: "";
     position: absolute;
@@ -1498,6 +1500,9 @@ display: none;
         border-radius:3px;
         transition:.2s
     }
+    .h{
+        display: none;
+    }
     .menu-toggle.open i:first-child{
         transform:translateY(6px) rotate(45deg)
     }
@@ -1594,7 +1599,9 @@ display: none;
     .projects-top{
         align-items:end
     }
-    
+        .h{
+        display: none;
+    }
     .section-heading{
         margin-bottom:20px
     }
