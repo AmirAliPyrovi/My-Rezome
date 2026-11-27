@@ -10,6 +10,12 @@
     --line:#e8ebf2;
     --shadow:0 12px 35px rgba(20,35,70,.09)
 }
+.logo1 {
+    filter: drop-shadow(0 0 12px rgba(59, 130, 246, 0.5))
+            drop-shadow(0 0 30px rgba(59, 130, 246, 0.25));
+    transition: 0.4s ease;
+}
+
 *{
     box-sizing:border-box;
     user-select: none;
